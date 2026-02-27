@@ -1,0 +1,28 @@
+class SRP {
+    public static void main(String[] args) {
+        CreditCardPayment cp = new CreditCardPayment();
+        cp.pay();
+    }
+}
+
+interface Payment {
+    void pay();
+}
+
+class CreditCardPayment implements Payment {
+    public void pay() {
+        System.out.println("Paid using Credit Card");
+    }
+}
+
+class UpiPayment implements Payment {
+    public void pay() {
+        System.out.println("Paid using UPI");
+    }
+}
+
+class PaymentService {
+    void processPayment(Payment payment) {
+        payment.pay();
+    }
+}
