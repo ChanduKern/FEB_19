@@ -1,0 +1,21 @@
+interface Payment {
+    void pay();
+}
+
+class CreditCardPayment implements Payment {
+    public void pay() {
+        System.out.println("Paid using Credit Card");
+    }
+}
+
+class OrderService {
+    private Payment payment;
+
+    OrderService(Payment payment) {
+        this.payment = payment;
+    }
+
+    void placeOrder() {
+        payment.pay();
+    }
+}
