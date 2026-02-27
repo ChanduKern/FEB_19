@@ -1,0 +1,7 @@
+interface Printer {
+    void print();
+}
+
+interface Scanner {
+    void scan();
+}
